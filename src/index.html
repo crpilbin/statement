@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bark</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="bundle.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="bark-header">
+      <div class="bark-header__logo"></div>
+      <div class="bark-header__mobile-controls">
+        <button id="bark-header--toggle" class="bark-header__menu-mobile"></button>
+      </div>
+
+      <div id="bark-header__menu-slider">
+        <ul class="bark-header__menu">
+          <li><a href="" class="active">Active</a></li>
+          <li><a href="">Link One</a></li>
+          <li><a href="">Link Two</a></li>
+          <li><a href="">Link Three</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="bark-splash">
+      <div class="bark-splash__desktop-hero-dog"></div>
+      <div class="bark-splash__caption-wrap">
+        <h1 class="bark-splash__caption">Vestibulum Fusce Aenean Dolor</h1>
+        <button class="bark-cta-btn signup-modal">Sign Up</button>
+        <div class="bark-splash__hero-dog"></div>
+      </div>
+    </section>
+
+    <section id="bark-best-sellers">
+      <h2 class="bark-best-sellers__title"><i class="bark-best-sellers__title-icon"></i>Our Best Sellers</h2>
+      <div id="bark-best-sellers__slider" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#bark-best-sellers__slider" data-slide-to="0" class="active"></li>
+          <li data-target="#bark-best-sellers__slider" data-slide-to="1"></li>
+          <li data-target="#bark-best-sellers__slider" data-slide-to="2"></li>
+          <li data-target="#bark-best-sellers__slider" data-slide-to="3"></li>
+          <li data-target="#bark-best-sellers__slider" data-slide-to="4"></li>
+          <li data-target="#bark-best-sellers__slider" data-slide-to="5"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-lg active">
+            <div class=" carousel-item item-wrap active">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product1.png" alt="First slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+            <div class="carousel-item item-wrap">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product2.png" alt="Second slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+            <div class="carousel-item item-wrap">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product3.png" alt="Third slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-lg">
+            <div class="carousel-item item-wrap">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product1.png" alt="First slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+            <div class="carousel-item item-wrap">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product2.png" alt="Second slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+            <div class="carousel-item item-wrap">
+              <img class="bark-best-sellers__item-image d-block w-100" src="http://codeonion.uk/statement/src/images/png/product3.png" alt="Third slide">
+              <div class="bark-best-sellers__item-info">
+                <p class="bark-best-sellers__description">Natures Menu Senior Dog Food Pouch Lamb with Chicken</p>
+                <div class="bark-best-sellers__price">£11.92</div>
+                <button class="bark-best-sellers__cta-btn">View More</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#bark-best-sellers__slider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#bark-best-sellers__slider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="bark-learn-more">
+      <div class="bark-learn-more__image-collection">
+        <img class="bark-learn-more__image" src="http://codeonion.uk/statement/src/images/png/dog.png" alt="">
+      </div>
+      <div class="bark-learn-more__info">
+        <h3 class="bark-learn-more__caption">Ornare Vulputate Elit</h3>
+        <div class="bark-learn-more__description">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</div>
+        <button class="bark-learn-more__cta-btn">Learn More</button>
+      </div>
+    </section>
+
+    <section id="bark-cta">
+      <i class="bark-cta__paw-icon"></i>
+      <h3 class="bark-cta__caption">Spend £40 for Free Delivery!*</h3>
+      <div class="bark-cta__description">*Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+    </section>
+
+    <footer id="bark-footer">
+      <div class="bark-footer__logo"></div>
+      <div class="bark-footer__menu">
+        <ul class="bark-footer__menu--left">
+          <li><a href="">Consectetur</a></li>
+          <li><a href="" class="active">Ullamcorper</a></li>
+          <li><a href="">Nullam</a></li>
+          <li><a href="">Inceptos</a></li>
+          <li><a href="">Bibendum</a></li>
+        </ul>
+        <ul class="bark-footer__menu--right">
+          <li><a href="">Consectetur</a></li>
+          <li><a href="">Ullamcorper</a></li>
+          <li><a href="">Nullam</a></li>
+          <li><a href="">Inceptos</a></li>
+          <li><a href="">Bibendum</a></li>
+        </ul>
+      </div>
+
+      <div class="bark-footer__contact">
+        <div class="bark-footer__cta-signup">
+          <a class="bark-footer__cta-button signup-modal">Click here to sign up <i class="bark-footer__cta-arrow"></i></a>
+        </div>
+        <ul class="bark-footer__social-links">
+          <li><a href=""><i class="fb"></i></a></li>
+          <li><a href=""><i class="inst"></i></a></li>
+          <li><a href=""><i class="twit"></i></a></li>
+          <li><a href=""><i class="yt"></i></a></li>
+        </ul>
+      </div>
+      <hr>
+      <ul class="bark-footer__payment-gateways">
+        <li><a href=""><i class="paypal"></i></a></li>
+        <li><a href=""><i class="mastercard"></i></a></li>
+        <li><a href=""><i class="visa"></i></a></li>
+        <li><a href=""><i class="amex"></i></a></li>
+        <li><a href=""><i class="maestro"></i></a></li>
+        <li><a href=""><i class="klarna"></i></a></li>
+        <li><a href=""><i class="apple"></i></a></li>
+        <li><a href=""><i class="google"></i></a></li>
+      </ul>
+      <p class="bark-footer__copyright">©2019 Bark Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <section id="bark-modal" class="">
+      <div class="bark-modal__undelay"></div>
+      <div class="bark-modal__wrap">
+        <div class="bark-modal__header">
+          <div id="bark-modal__close-btn"></div>
+          <div class="bark-modal__image">
+            <img src="http://codeonion.uk/statement/src/images/png/dog-popup.png" alt="">
+          </div>
+        </div>
+        <div class="bark-modal__body">
+          <h4 class="bark-modal__title">Newsletter Sign Up</h4>
+          <form action="" class="bark-modal__form">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="email-address" placeholder="Email Address">
+            <p class="bark-modal__form-notes">Donec id elit non mi porta gravida at eget metus.</p>
+            <input type="submit" class="bark-modal__form-submit" value="sign up">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>

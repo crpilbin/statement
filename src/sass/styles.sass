@@ -1,0 +1,681 @@
+@import '_variables'
+@import '_extend'
+@import '_responsive'
+
+body
+  font: 100% $font-stack
+  color: $font-color
+  margin: 0
+
+header
+  position: relative
+  background: #95DBE5
+  padding: 60px 40px
+  @include respond-to(medium)
+    padding: 60px 40px 20px
+
+  .bark-header__logo
+    position: relative
+    display: inline-block
+    width: 100px
+    height: 28px
+    background: url('../images/svg/logo.svg') no-repeat top left
+    z-index: 10
+    @include respond-to(small)
+      width: 140px
+      height: 40px
+
+  .bark-header__mobile-controls
+    position: relative
+    float: right
+    position: relative
+    top: -10px
+    z-index: 10
+    @include respond-to(medium)
+      display: none
+
+    .bark-header__menu-mobile.close
+      background: url('../images/svg/cross.svg') no-repeat center
+      width: 25px
+      height: 25px
+      position: relative
+      top: 8px
+
+    .bark-header__menu-mobile
+      display: block
+      width: 48px
+      height: 48px
+      background: url('../images/svg/menu.svg') no-repeat center
+      background-size: 20px
+      background-color: $btn-orange
+      border-radius: 100%
+      border: none
+      cursor: pointer
+
+
+  #bark-header__menu-slider.slide-down
+    max-height: 100vh
+
+  #bark-header__menu-slider
+    height: auto
+    max-height: 0
+    line-height: 0
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    z-index: 9
+    -webkit-transition: max-height 1s
+    -moz-transition: max-height 1s
+    -o-transition: max-height 1s
+    transition: max-height 1s
+    @include respond-to(medium)
+      max-height: none
+      text-align: right
+      width: auto
+      float: right
+      position: relative
+
+    .bark-header__menu
+      list-style: none
+      margin: 0
+      padding: 160px 0 80px
+      background: $btn-orange
+      text-align: center
+      color: $white
+      clip-path: circle(60vh at 50vw 10vh)
+
+      @include respond-to(small)
+        clip-path: circle(200vh at 50vw -130vh)
+
+      @include respond-to(medium)
+        clip-path: none
+        background: none
+        padding: 0
+
+      li
+        padding: 10px
+        line-height: 2rem
+        @include respond-to(medium)
+          display: inline-block
+          padding: 10px 12px
+        a
+          color: $white
+          text-decoration: none
+          font-size: 1.3rem
+          font-weight: 400
+          letter-spacing: .1rem
+          @include respond-to(medium)
+            text-transform: uppercase
+            font-size: .9rem
+        a.active
+          opacity: 0.6
+          @include respond-to(medium)
+            border-bottom: 2px solid $btn-orange
+            padding-bottom: 8px
+            opacity: 1
+
+
+#bark-splash
+  position: relative
+  overflow: hidden
+  width: auto
+  height: calc(100vh - 100px)
+  background-color: $bg-blue
+  clip-path: circle(100vh at 50vw -18vh)
+
+  @include respond-to(small)
+    width: 100%
+    clip-path: circle(200vh at 50vw -118vh)
+  @include respond-to(medium)
+    padding: 0 8vw
+    clip-path: circle(500vh at 50vw -421vh)
+  @include respond-to(large)
+    padding: 0 15vw
+
+  .bark-splash__desktop-hero-dog
+    display: none
+    @include respond-to(medium)
+      display: inline-block
+      width: 60%
+      height: 100%
+      background: url('../images/png/dog-hero@2x.png') no-repeat bottom center
+      background-size: contain
+    @include respond-to(large)
+      width: 53%
+
+  .bark-splash__caption-wrap
+    @include respond-to(medium)
+      width: 40%
+      float: right
+      top: 40%
+      position: relative
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+    @include respond-to(large)
+      width: 47%
+
+    .bark-splash__caption
+      font-size: 2rem
+      font-weight: 400
+      color: $white
+      line-height: 3rem
+      text-align: center
+      padding: 10px 50px
+      @include respond-to(medium)
+        padding: 10px 0
+      @include respond-to(large)
+        font-size: 3rem
+        line-height: 4rem
+        padding: 10px 50px
+
+    .bark-cta-btn
+      @extend %bark-cta-btn
+
+    .bark-splash__hero-dog
+      position: absolute
+      bottom: 0
+      width: 75%
+      height: 60%
+      left: 50%
+      -webkit-transform: translateX(-25%)
+      -moz-transform: translateX(-25%)
+      -o-transform: translateX(-25%)
+      transform: translateX(-25%)
+      background: url('../images/png/dog-hero.png') no-repeat center center
+      background-size: contain
+      @include respond-to(x-small)
+        height: 70%
+      @include respond-to(medium)
+        display: none
+
+
+#bark-best-sellers
+  padding: 80px 0 20px
+  @include respond-to(medium)
+    padding-bottom: 0
+
+  .bark-best-sellers__title
+    text-align: center
+    margin: 20px 0 60px
+    font-size: 1.4rem
+
+    .bark-best-sellers__title-icon
+      @extend %bark-paw-icon
+
+  #bark-best-sellers__slider
+
+    .carousel-indicators
+      bottom: 40px
+      @include respond-to(medium)
+        bottom: 100px
+      @include respond-to(large)
+        bottom: 40px
+      li
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        background-color: $gray
+        margin-left: 7px
+        margin-right: 7px
+        @include respond-to(small)
+          &[data-slide-to="2"]
+            display: none
+          &[data-slide-to="3"]
+            display: none
+          &[data-slide-to="4"]
+            display: none
+          &[data-slide-to="5"]
+            display: none
+
+      li.active
+        background-color: $black
+
+    .carousel-control-prev,
+    .carousel-control-next
+      display: none
+      @include respond-to(small)
+        display: inline-block
+        top: 50%
+
+    .carousel-control-prev-icon
+      background: url('../images/svg/chevron-prev.svg') no-repeat top center
+
+    .carousel-control-next-icon
+      background: url('../images/svg/chevron-next.svg') no-repeat top center
+
+    .carousel-inner
+      max-width: 1400px
+      margin: 0 auto
+      @include respond-to(large)
+        max-width: 1100px
+      @include respond-to(huge)
+        max-width: 1400px
+        min-height: 700px
+      .item-wrap
+        padding: 0 20px
+        @include respond-to(small)
+          display: inline-block
+          width: 30%
+
+      .carousel-item
+        padding: 0 40px
+        text-align: center
+        max-width: 500px
+        margin: 0 auto
+        @include respond-to(small)
+          max-width: none
+          min-height: 500px
+        @include respond-to(medium)
+          min-height: 600px
+
+        .bark-best-sellers__item-image
+          position: relative
+          z-index: 10
+          padding: 20px
+
+        .bark-best-sellers__item-info
+          background: $light-gray
+          padding: 120px 40px 30px
+          -webkit-transform: translateY(-100px)
+          -moz-transform: translateY(-100px)
+          -o-transform: translateY(-100px)
+          transform: translateY(-100px)
+          z-index: 1
+          border: 2px solid $gray
+          border-radius: 3px
+          @include respond-to(small)
+            padding: 120px 20px 30px
+            border: none
+            &:hover
+              padding: 90px 20px 30px
+              .bark-best-sellers__cta-btn
+                display: block
+
+
+          .bark-best-sellers__description
+            letter-spacing: .05rem
+            font-weight: 400
+            @include respond-to(small)
+              font-size: .8rem
+
+          .bark-best-sellers__price
+            color: $btn-orange
+            font-weight: 600
+            margin: 10px 0
+
+          .bark-best-sellers__cta-btn
+            @extend %bark-cta-btn
+
+            @include respond-to(small)
+              display: none
+              font-size: .7rem
+              padding: 18px 20px
+
+
+#bark-learn-more
+  padding: 20px 40px 0
+  text-align: center
+  overflow: auto
+  max-width: 1400px
+  margin: 0 auto
+  @include respond-to(medium)
+    padding: 0 40px 60px
+  @include respond-to(large)
+    padding-top: 20px
+
+  .bark-learn-more__image-collection
+    background: url('../images/svg/shape-blob.svg') no-repeat top center
+    text-align: right
+    padding-top: 40px
+    max-width: 500px
+    @include respond-to(small)
+      width: 50%
+      float: left
+      padding: 0 40px
+
+    .bark-learn-more__image
+      max-width: 80%
+      background: url('../images/svg/shape-circle.svg') no-repeat top center
+      background-position: 0 100%
+
+  .bark-learn-more__info
+    @include respond-to(small)
+      width: 50%
+      display: inline-block
+      text-align: left
+      padding: 0 40px
+    @include respond-to(medium)
+
+    .bark-learn-more__caption
+      margin-top: 40px
+      font-size: 1.6rem
+      @include respond-to(small)
+        margin-top: 0
+      @include respond-to(medium)
+        margin-top: 40px
+
+    .bark-learn-more__description
+      line-height: 1.6rem
+      font-weight: 400
+      margin: 40px 0
+      color: $light-gray-text
+      font-size: 0.9rem
+      @include respond-to(small)
+        margin: 10px 0
+      @include respond-to(medium)
+        margin: 40px 0
+
+    .bark-learn-more__cta-btn
+      @extend %bark-cta-btn
+      @include respond-to(small)
+        margin: 0
+
+
+#bark-cta
+  background: url('../images/png/pattern-mobile.png') no-repeat center center
+  background-size: contain
+  text-align: center
+  padding: 150px 0
+  margin-top: 40px
+  @include respond-to(small)
+    background: url('../images/png/pattern-desktop.png') no-repeat center center
+    background-size: 100vw
+  @include respond-to(huge)
+    margin-bottom:40px
+
+  .bark-cta__paw-icon
+    @extend %bark-paw-icon
+
+  .bark-cta__caption
+    font-size: 1.6rem
+    max-width: 200px
+    margin: 20px auto
+    @include respond-to(large)
+      font-size: 2.2rem
+      max-width: 400px
+
+  .bark-cta__description
+    font-size: 0.75rem
+    letter-spacing: 0.03rem
+    line-height: 1.1rem
+    max-width: 200px
+    margin: 20px auto
+    color: $light-gray-text
+    @include respond-to(small)
+      max-width: 300px
+    @include respond-to(huge)
+      font-size: 1rem
+      line-height: 1.4rem
+
+#bark-footer
+  padding: 0 40px 40px
+  @include respond-to(x-small)
+    padding: 50px 40px 40px
+  @include respond-to(small)
+    padding-right: 20px
+  @include respond-to(medium)
+    padding: 50px 40px 40px
+
+  .bark-footer__logo
+    width: 100px
+    height: 28px
+    background: url('../images/svg/logo-black.svg') no-repeat top left
+    margin: 20px 0 50px
+    @include respond-to(small)
+      display: inline-block
+      width: 30%
+      vertical-align: top
+      margin: 0
+
+  .bark-footer__menu
+    overflow: auto
+    @include respond-to(small)
+      display: inline-block
+      width: 35%
+
+    .bark-footer__menu--left,
+    .bark-footer__menu--right
+      margin: 0
+      padding: 0
+      list-style: none
+      width: 49%
+      float: left
+      li
+        margin: 10px 0
+        @include respond-to(small)
+          margin: 0 0 10px
+        a
+          font-size: 0.75rem
+          letter-spacing: 0.1rem
+          text-transform: uppercase
+          color: $gray
+          cursor: pointer
+        a.active
+          color: $black
+
+    .bark-footer__menu--right
+      float: right
+
+  .bark-footer__contact
+    @include respond-to(small)
+      display: inline-block
+      width: 30%
+      vertical-align: top
+      margin: 0
+
+    .bark-footer__cta-signup
+      margin: 40px 0
+      cursor: pointer
+      @include respond-to(small)
+        margin: 0 0 40px
+
+      .bark-footer__cta-button
+        font-size: 1.3rem
+        letter-spacing: .05rem
+        color: $btn-orange
+        @include respond-to(small)
+          font-size: 1rem
+
+        .bark-footer__cta-arrow
+          display: inline-block
+          width: 30px
+          height: 20px
+          background: url('../images/svg/arrow-forward.svg') no-repeat top left
+          position: relative
+          top: 4px
+          margin-left: 10px
+
+    .bark-footer__social-links
+      margin: 0 0 80px
+      padding: 0
+      list-style: none
+      li
+        display: inline-block
+        a
+          margin: 0 20px 0 0
+          cursor: pointer
+          i
+            display: inline-block
+            width: 20px
+            height: 20px
+          .fb
+            background: url('../images/svg/social-fb.svg') no-repeat center
+          .inst
+            background: url('../images/svg/social-insta.svg') no-repeat center
+          .twit
+            background: url('../images/svg/social-tw.svg') no-repeat center
+          .yt
+            background: url('../images/svg/social-yt.svg') no-repeat center
+
+  hr
+    border-top: 2px solid rgba(0,0,0,.1)
+    @include respond-to(small)
+      width: 70%
+      margin-left: 30%
+
+  .bark-footer__payment-gateways
+    margin: 40px 0 30px
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    @include respond-to(small)
+      width: 35%
+      margin-left: 30%
+      display: inline-block
+      margin-top: 20px
+    li
+      display: inline-block
+      width: calc(100% / 8)
+      @include respond-to(small)
+        width: 10%
+      a
+        cursor: pointer
+        i
+          display: inline-block
+          width: 100%
+          height: 27px
+        .paypal
+          background: url('../images/svg/payment-paypal.svg') no-repeat center
+        .mastercard
+          background: url('../images/svg/payment-mastercard.svg') no-repeat center
+        .visa
+          background: url('../images/svg/payment-via.svg') no-repeat center
+        .amex
+          background: url('../images/svg/payment-amex.svg') no-repeat center
+        .maestro
+          background: url('../images/svg/payment-maestro.svg') no-repeat center
+        .klarna
+          background: url('../images/svg/payment-klarna.svg') no-repeat center
+        .apple
+          background: url('../images/svg/payment-apple.svg') no-repeat center
+        .google
+          background: url('../images/svg/payment-google.svg') no-repeat center
+
+  .bark-footer__copyright
+    color: $light-gray-text
+    font-size: 0.75rem
+    @include respond-to(small)
+      display: inline-block
+      margin: 0
+      position: relative
+      top: -10px
+
+
+#bark-modal.fade-in
+  visibility: visible
+  opacity: 1
+  transition: opacity 0.3s linear
+
+#bark-modal
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 15
+  padding: 30px
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0s 0.5s, opacity 0.1s linear
+
+  .bark-modal__undelay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.5)
+
+  .bark-modal__wrap
+    max-height: 100vh
+    overflow-y: auto
+    border-radius: 5px
+    max-width: 500px
+    margin: 0 auto
+    @include respond-to(medium)
+      position: relative
+      max-width: none
+      width: 800px
+      height: 460px
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+      overflow: hidden
+
+    .bark-modal__header
+      position: relative
+      background: $bg-light-gray
+      margin: 0 auto
+      @include respond-to(medium)
+        height: 100%
+        width: 50%
+        position: absolute
+        left: 0
+
+      #bark-modal__close-btn
+        background: url('../images/svg/cross-black.svg') no-repeat center
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 15px
+        right: 15px
+        cursor: pointer
+        @include respond-to(medium)
+          right: -95%
+          z-index: 20
+      .bark-modal__image
+        text-align: center
+        img
+          max-width: 45%
+          padding: 12px 12px 0
+          @include respond-to(medium)
+            max-width: none
+            padding: 0
+
+    .bark-modal__body
+      position: relative
+      background: $white
+      text-align: center
+      @include respond-to(medium)
+        height: 100%
+        width: 50%
+        position: absolute
+        right: 0
+        overflow: hidden
+        padding: 40px
+
+      .bark-modal__title
+        padding: 40px 0 20px
+        @include respond-to(medium)
+          padding: 0
+          margin-top: 40px
+
+      .bark-modal__form
+        padding: 0 30px 40px
+        @include respond-to(medium)
+          padding: 0
+          margin-top: 40px
+        input
+          &[type="text"]
+            margin: 5px 0
+            border: none
+            background: $pale-blue
+            padding: 13px 25px
+            border-radius: 25px
+            width: 100%
+        .bark-modal__form-notes
+          color: $gray
+          fon-weight: 400
+          margin: 20px 0 30px
+          font-size: 0.9rem
+          line-height: 1.3rem
+        .bark-modal__form-submit
+          @extend %bark-cta-btn
