@@ -57,12 +57,15 @@
     text-align: center
     color: $white
     clip-path: circle(60vh at 50vw 10vh)
+    -webkit-clip-path: circle(60vh at 50vw 10vh)
 
     @include respond-to(small)
       clip-path: circle(200vh at 50vw -130vh)
+      -webkit-clip-path: circle(200vh at 50vw -130vh)
 
     @include respond-to(medium)
       clip-path: none
+      -webkit-clip-path: none
       background: none
       padding: 0
 

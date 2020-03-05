@@ -5,13 +5,16 @@
   height: calc(100vh - 100px)
   background-color: $bg-blue
   clip-path: circle(100vh at 50vw -18vh)
+  -webkit-clip-path: circle(100vh at 50vw -18vh)
 
   @include respond-to(small)
     width: 100%
     clip-path: circle(200vh at 50vw -118vh)
+    -webkit-clip-path: circle(200vh at 50vw -118vh)
   @include respond-to(medium)
     padding: 0 8vw
     clip-path: circle(500vh at 50vw -421vh)
+    -webkit-clip-path: circle(500vh at 50vw -421vh)
   @include respond-to(large)
     padding: 0 15vw
 
@@ -189,7 +192,7 @@
     max-width: 200px
     margin: 20px auto
     color: $light-gray-text
-    
+
     @include respond-to(small)
       max-width: 300px
     @include respond-to(huge)
