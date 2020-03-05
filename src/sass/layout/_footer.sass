@@ -1,0 +1,153 @@
+#bark-footer
+  padding: 0 40px 40px
+  @include respond-to(x-small)
+    padding: 50px 40px 40px
+  @include respond-to(small)
+    padding-right: 20px
+  @include respond-to(medium)
+    padding: 50px 40px 40px
+
+  .bark-footer__logo
+    width: 100px
+    height: 28px
+    background: url('../images/svg/logo-black.svg') no-repeat top left
+    margin: 20px 0 50px
+    @include respond-to(small)
+      display: inline-block
+      width: 30%
+      vertical-align: top
+      margin: 0
+
+  .bark-footer__menu
+    overflow: auto
+    @include respond-to(small)
+      display: inline-block
+      width: 35%
+
+    .bark-footer__menu--left,
+    .bark-footer__menu--right
+      margin: 0
+      padding: 0
+      list-style: none
+      width: 49%
+      float: left
+      li
+        margin: 10px 0
+        @include respond-to(small)
+          margin: 0 0 10px
+        a
+          font-size: 0.75rem
+          letter-spacing: 0.1rem
+          text-transform: uppercase
+          color: $gray
+          cursor: pointer
+        a.active
+          color: $black
+
+    .bark-footer__menu--right
+      float: right
+
+  .bark-footer__contact
+    @include respond-to(small)
+      display: inline-block
+      width: 30%
+      vertical-align: top
+      margin: 0
+
+    .bark-footer__cta-signup
+      margin: 40px 0
+      cursor: pointer
+      @include respond-to(small)
+        margin: 0 0 40px
+
+      .bark-footer__cta-button
+        font-size: 1.3rem
+        letter-spacing: .05rem
+        color: $btn-orange
+        @include respond-to(small)
+          font-size: 1rem
+
+        .bark-footer__cta-arrow
+          display: inline-block
+          width: 30px
+          height: 20px
+          background: url('../images/svg/arrow-forward.svg') no-repeat top left
+          position: relative
+          top: 4px
+          margin-left: 10px
+
+    .bark-footer__social-links
+      margin: 0 0 80px
+      padding: 0
+      list-style: none
+      li
+        display: inline-block
+        a
+          margin: 0 20px 0 0
+          cursor: pointer
+          i
+            display: inline-block
+            width: 20px
+            height: 20px
+          .fb
+            background: url('../images/svg/social-fb.svg') no-repeat center
+          .inst
+            background: url('../images/svg/social-insta.svg') no-repeat center
+          .twit
+            background: url('../images/svg/social-tw.svg') no-repeat center
+          .yt
+            background: url('../images/svg/social-yt.svg') no-repeat center
+
+  hr
+    border-top: 2px solid rgba(0,0,0,.1)
+    @include respond-to(small)
+      width: 70%
+      margin-left: 30%
+
+  .bark-footer__payment-gateways
+    margin: 40px 0 30px
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    @include respond-to(small)
+      width: 35%
+      margin-left: 30%
+      display: inline-block
+      margin-top: 20px
+    li
+      display: inline-block
+      width: calc(100% / 8)
+      @include respond-to(small)
+        width: 10%
+      a
+        cursor: pointer
+        i
+          display: inline-block
+          width: 100%
+          height: 27px
+        .paypal
+          background: url('../images/svg/payment-paypal.svg') no-repeat center
+        .mastercard
+          background: url('../images/svg/payment-mastercard.svg') no-repeat center
+        .visa
+          background: url('../images/svg/payment-via.svg') no-repeat center
+        .amex
+          background: url('../images/svg/payment-amex.svg') no-repeat center
+        .maestro
+          background: url('../images/svg/payment-maestro.svg') no-repeat center
+        .klarna
+          background: url('../images/svg/payment-klarna.svg') no-repeat center
+        .apple
+          background: url('../images/svg/payment-apple.svg') no-repeat center
+        .google
+          background: url('../images/svg/payment-google.svg') no-repeat center
+
+  .bark-footer__copyright
+    color: $light-gray-text
+    font-size: 0.75rem
+    @include respond-to(small)
+      display: inline-block
+      margin: 0
+      position: relative
+      top: -10px

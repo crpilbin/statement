@@ -1,0 +1,197 @@
+#bark-splash
+  position: relative
+  overflow: hidden
+  width: auto
+  height: calc(100vh - 100px)
+  background-color: $bg-blue
+  clip-path: circle(100vh at 50vw -18vh)
+
+  @include respond-to(small)
+    width: 100%
+    clip-path: circle(200vh at 50vw -118vh)
+  @include respond-to(medium)
+    padding: 0 8vw
+    clip-path: circle(500vh at 50vw -421vh)
+  @include respond-to(large)
+    padding: 0 15vw
+
+  .bark-splash__desktop-hero-dog
+    display: none
+
+    @include respond-to(medium)
+      display: inline-block
+      width: 60%
+      height: 100%
+      background: url('../images/png/dog-hero@2x.png') no-repeat bottom center
+      background-size: contain
+    @include respond-to(large)
+      width: 53%
+
+  .bark-splash__caption-wrap
+
+    @include respond-to(medium)
+      width: 40%
+      float: right
+      top: 40%
+      position: relative
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+    @include respond-to(large)
+      width: 47%
+
+    .bark-splash__caption
+      font-size: 2rem
+      font-weight: 400
+      color: $white
+      line-height: 3rem
+      text-align: center
+      padding: 10px 50px
+
+      @include respond-to(medium)
+        padding: 10px 0
+      @include respond-to(large)
+        font-size: 3rem
+        line-height: 4rem
+        padding: 10px 50px
+
+    .bark-cta-btn
+      @extend %bark-cta-btn
+
+    .bark-splash__hero-dog
+      position: absolute
+      bottom: 0
+      width: 75%
+      height: 60%
+      left: 50%
+      -webkit-transform: translateX(-25%)
+      -moz-transform: translateX(-25%)
+      -o-transform: translateX(-25%)
+      transform: translateX(-25%)
+      background: url('../images/png/dog-hero.png') no-repeat center center
+      background-size: contain
+
+      @include respond-to(x-small)
+        height: 70%
+      @include respond-to(medium)
+        display: none
+
+
+#bark-best-sellers
+  padding: 80px 0 20px
+
+  @include respond-to(medium)
+    padding-bottom: 0
+
+  .bark-best-sellers__title
+    text-align: center
+    margin: 20px 0 60px
+    font-size: 1.4rem
+
+    .bark-best-sellers__title-icon
+      @extend %bark-paw-icon
+
+
+#bark-learn-more
+  padding: 20px 40px 0
+  text-align: center
+  overflow: auto
+  max-width: 1400px
+  margin: 0 auto
+
+  @include respond-to(medium)
+    padding: 0 40px 60px
+  @include respond-to(large)
+    padding-top: 20px
+
+  .bark-learn-more__image-collection
+    background: url('../images/svg/shape-blob.svg') no-repeat top center
+    text-align: right
+    padding-top: 40px
+    max-width: 500px
+
+    @include respond-to(small)
+      width: 50%
+      float: left
+      padding: 0 40px
+
+    .bark-learn-more__image
+      max-width: 80%
+      background: url('../images/svg/shape-circle.svg') no-repeat top center
+      background-position: 0 100%
+
+  .bark-learn-more__info
+
+    @include respond-to(small)
+      width: 50%
+      display: inline-block
+      text-align: left
+      padding: 0 40px
+
+    .bark-learn-more__caption
+      margin-top: 40px
+      font-size: 1.6rem
+
+      @include respond-to(small)
+        margin-top: 0
+      @include respond-to(medium)
+        margin-top: 40px
+
+    .bark-learn-more__description
+      line-height: 1.6rem
+      font-weight: 400
+      margin: 40px 0
+      color: $light-gray-text
+      font-size: 0.9rem
+
+      @include respond-to(small)
+        margin: 10px 0
+      @include respond-to(medium)
+        margin: 40px 0
+
+    .bark-learn-more__cta-btn
+
+      @extend %bark-cta-btn
+      @include respond-to(small)
+        margin: 0
+
+
+#bark-cta
+  background: url('../images/png/pattern-mobile.png') no-repeat center center
+  background-size: contain
+  text-align: center
+  padding: 150px 0
+  margin-top: 40px
+
+  @include respond-to(small)
+    background: url('../images/png/pattern-desktop.png') no-repeat center center
+    background-size: 100vw
+  @include respond-to(huge)
+    margin-bottom:40px
+
+  .bark-cta__paw-icon
+    @extend %bark-paw-icon
+
+  .bark-cta__caption
+    font-size: 1.6rem
+    max-width: 200px
+    margin: 20px auto
+
+    @include respond-to(large)
+      font-size: 2.2rem
+      max-width: 400px
+
+  .bark-cta__description
+    font-size: 0.75rem
+    letter-spacing: 0.03rem
+    line-height: 1.1rem
+    max-width: 200px
+    margin: 20px auto
+    color: $light-gray-text
+    
+    @include respond-to(small)
+      max-width: 300px
+    @include respond-to(huge)
+      font-size: 1rem
+      line-height: 1.4rem

@@ -1,0 +1,106 @@
+.carousel-indicators
+  bottom: 40px
+  @include respond-to(medium)
+    bottom: 100px
+  @include respond-to(large)
+    bottom: 40px
+  li
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background-color: $gray
+    margin-left: 7px
+    margin-right: 7px
+    @include respond-to(small)
+      &[data-slide-to="2"]
+        display: none
+      &[data-slide-to="3"]
+        display: none
+      &[data-slide-to="4"]
+        display: none
+      &[data-slide-to="5"]
+        display: none
+
+  li.active
+    background-color: $black
+
+.carousel-control-prev,
+.carousel-control-next
+  display: none
+  @include respond-to(small)
+    display: inline-block
+    top: 50%
+
+.carousel-control-prev-icon
+  background: url('../images/svg/chevron-prev.svg') no-repeat top center
+
+.carousel-control-next-icon
+  background: url('../images/svg/chevron-next.svg') no-repeat top center
+
+.carousel-inner
+  max-width: 1400px
+  margin: 0 auto
+  @include respond-to(large)
+    max-width: 1100px
+  @include respond-to(huge)
+    max-width: 1400px
+    min-height: 700px
+  .item-wrap
+    padding: 0 20px
+    @include respond-to(small)
+      display: inline-block
+      width: 30%
+
+  .carousel-item
+    padding: 0 40px
+    text-align: center
+    max-width: 500px
+    margin: 0 auto
+    @include respond-to(small)
+      max-width: none
+      min-height: 500px
+    @include respond-to(medium)
+      min-height: 600px
+
+    .bark-best-sellers__item-image
+      position: relative
+      z-index: 10
+      padding: 20px
+
+    .bark-best-sellers__item-info
+      background: $light-gray
+      padding: 120px 40px 30px
+      -webkit-transform: translateY(-100px)
+      -moz-transform: translateY(-100px)
+      -o-transform: translateY(-100px)
+      transform: translateY(-100px)
+      z-index: 1
+      border: 2px solid $gray
+      border-radius: 3px
+      @include respond-to(small)
+        padding: 120px 20px 30px
+        border: none
+        &:hover
+          padding: 90px 20px 30px
+          .bark-best-sellers__cta-btn
+            display: block
+
+
+      .bark-best-sellers__description
+        letter-spacing: .05rem
+        font-weight: 400
+        @include respond-to(small)
+          font-size: .8rem
+
+      .bark-best-sellers__price
+        color: $btn-orange
+        font-weight: 600
+        margin: 10px 0
+
+      .bark-best-sellers__cta-btn
+        @extend %bark-cta-btn
+
+        @include respond-to(small)
+          display: none
+          font-size: .7rem
+          padding: 18px 20px

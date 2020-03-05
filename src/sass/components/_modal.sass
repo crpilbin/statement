@@ -1,0 +1,100 @@
+#bark-modal.fade-in
+  visibility: visible
+  opacity: 1
+  transition: opacity 0.3s linear
+
+#bark-modal
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 15
+  padding: 30px
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0s 0.5s, opacity 0.1s linear
+
+  .bark-modal__undelay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.5)
+
+  .bark-modal__wrap
+    max-height: 100vh
+    overflow-y: auto
+    border-radius: 5px
+    max-width: 500px
+    margin: 0 auto
+    @include respond-to(medium)
+      position: relative
+      max-width: none
+      width: 800px
+      height: 460px
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+      overflow: hidden
+
+    .bark-modal__header
+      position: relative
+      background: $bg-light-gray
+      margin: 0 auto
+      @include respond-to(medium)
+        height: 100%
+        width: 50%
+        position: absolute
+        left: 0
+
+      #bark-modal__close-btn
+        background: url('../images/svg/cross-black.svg') no-repeat center
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 15px
+        right: 15px
+        cursor: pointer
+        @include respond-to(medium)
+          right: -95%
+          z-index: 20
+      .bark-modal__image
+        text-align: center
+        img
+          max-width: 45%
+          padding: 12px 12px 0
+          @include respond-to(medium)
+            max-width: none
+            padding: 0
+
+    .bark-modal__body
+      position: relative
+      background: $white
+      text-align: center
+      @include respond-to(medium)
+        height: 100%
+        width: 50%
+        position: absolute
+        right: 0
+        overflow: hidden
+        padding: 40px
+
+      .bark-modal__title
+        padding: 40px 0 20px
+        @include respond-to(medium)
+          padding: 0
+          margin-top: 40px
+
+      .bark-modal__form
+        @extend %bark-modal--form
+
+        .bark-modal__form-notes
+          @extend %bark-modal--form-notes
+
+        .bark-modal__form-submit
+          @extend %bark-modal--form-submit

@@ -1,0 +1,89 @@
+.bark-header__mobile-controls
+  position: relative
+  float: right
+  position: relative
+  top: -10px
+  z-index: 10
+  @include respond-to(medium)
+    display: none
+
+  .bark-header__menu-mobile.close
+    background: url('../images/svg/cross.svg') no-repeat center
+    width: 25px
+    height: 25px
+    position: relative
+    top: 8px
+
+  .bark-header__menu-mobile
+    display: block
+    width: 48px
+    height: 48px
+    background: url('../images/svg/menu.svg') no-repeat center
+    background-size: 20px
+    background-color: $btn-orange
+    border-radius: 100%
+    border: none
+    cursor: pointer
+
+#bark-header__menu-slider.slide-down
+  max-height: 100vh
+
+#bark-header__menu-slider
+  height: auto
+  max-height: 0
+  line-height: 0
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  z-index: 9
+  -webkit-transition: max-height 1s
+  -moz-transition: max-height 1s
+  -o-transition: max-height 1s
+  transition: max-height 1s
+  @include respond-to(medium)
+    max-height: none
+    text-align: right
+    width: auto
+    float: right
+    position: relative
+
+  .bark-header__menu
+    list-style: none
+    margin: 0
+    padding: 160px 0 80px
+    background: $btn-orange
+    text-align: center
+    color: $white
+    clip-path: circle(60vh at 50vw 10vh)
+
+    @include respond-to(small)
+      clip-path: circle(200vh at 50vw -130vh)
+
+    @include respond-to(medium)
+      clip-path: none
+      background: none
+      padding: 0
+
+    li
+      padding: 10px
+      line-height: 2rem
+      @include respond-to(medium)
+        display: inline-block
+        padding: 10px 12px
+      a
+        color: $white
+        text-decoration: none
+        font-size: 1.3rem
+        font-weight: 400
+        letter-spacing: .1rem
+        @include respond-to(medium)
+          text-transform: uppercase
+          font-size: .9rem
+      a.active
+        opacity: 0.6
+        @include respond-to(medium)
+          border-bottom: 2px solid $btn-orange
+          padding-bottom: 8px
+          opacity: 1

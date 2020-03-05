@@ -1,0 +1,23 @@
+%bark-modal--form
+  padding: 0 30px 40px
+  @include respond-to(medium)
+    padding: 0
+    margin-top: 40px
+  input
+    &[type="text"]
+      margin: 5px 0
+      border: none
+      background: $pale-blue
+      padding: 13px 25px
+      border-radius: 25px
+      width: 100%
+
+  %bark-modal--form-notes
+    color: $gray
+    fon-weight: 400
+    margin: 20px 0 30px
+    font-size: 0.9rem
+    line-height: 1.3rem
+    
+  %bark-modal--form-submit
+    @extend %bark-cta-btn
